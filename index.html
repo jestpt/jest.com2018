@@ -162,7 +162,7 @@
             <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: geral@jest.pt<br>
           </div>
           <p>contact us!!!</p>
-          <form action="/action_page.php" target="_blank">
+          <form method="POST" action="/email">
             <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
               <div class="w3-half">
                 <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
@@ -176,6 +176,15 @@
               <i class="fa fa-paper-plane"></i> SEND MESSAGE
             </button>
           </form>
+          <!-- <form method="POST" action="/email">
+            Email:<br>
+            <input type="text" name="Email" value="Email">
+            <br>
+            text:<br>
+            <input type="text" name="text" value="text">
+            <br><br>
+            <input type="submit" value="Submit">
+          </form>  -->
         </div>
       </div>
     </div>

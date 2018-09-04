@@ -21,16 +21,15 @@ router.get('/', function(req, res){
 
 
 router.post('/email',urlencodedParser, function(req, res){
-    console.log(req.body.Email);
     // using SendGrid's v3 Node.js Library
     // https://github.com/sendgrid/sendgrid-nodejs
     const sgMail = require('@sendgrid/mail');
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const msg = {
-        to: 'grifo.lixo.1@gmail.com',
+        to: 'geral@jest.pt',
         from: req.body.Email,
-        subject: 'teste',
-        text: req.body.text,
+        subject: 'Contacto jest.pt',
+        text: req.body.Message,
     };
     sgMail.send(msg);
     res.sendFile(path.join(__dirname, '../index.html'));
